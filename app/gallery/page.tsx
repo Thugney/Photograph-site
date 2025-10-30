@@ -1,26 +1,18 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { GALLERY_IMAGES, IMAGE_CONFIG } from '@/config/images';
 
 const categories = ['All', 'Weddings', 'Portraits', 'Events', 'Commercial'];
 
-// Sample gallery data - replace with your actual images
-const galleryImages = [
-  { id: 1, category: 'Weddings', title: 'Beach Wedding', url: '/images/placeholder.jpg' },
-  { id: 2, category: 'Portraits', title: 'Studio Portrait', url: '/images/placeholder.jpg' },
-  { id: 3, category: 'Events', title: 'Corporate Event', url: '/images/placeholder.jpg' },
-  { id: 4, category: 'Weddings', title: 'Garden Wedding', url: '/images/placeholder.jpg' },
-  { id: 5, category: 'Portraits', title: 'Family Portrait', url: '/images/placeholder.jpg' },
-  { id: 6, category: 'Commercial', title: 'Product Shot', url: '/images/placeholder.jpg' },
-  { id: 7, category: 'Events', title: 'Birthday Party', url: '/images/placeholder.jpg' },
-  { id: 8, category: 'Weddings', title: 'Church Wedding', url: '/images/placeholder.jpg' },
-  { id: 9, category: 'Portraits', title: 'Professional Headshot', url: '/images/placeholder.jpg' },
-  { id: 10, category: 'Commercial', title: 'Architecture', url: '/images/placeholder.jpg' },
-  { id: 11, category: 'Events', title: 'Conference', url: '/images/placeholder.jpg' },
-  { id: 12, category: 'Weddings', title: 'Reception', url: '/images/placeholder.jpg' },
-];
+// Convert gallery images to include full URLs
+const galleryImages = GALLERY_IMAGES.map(img => ({
+  ...img,
+  url: IMAGE_CONFIG.getImageUrl(img.filename),
+}));
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -99,8 +91,15 @@ export default function Gallery() {
                 whileHover={{ scale: 1.05 }}
                 layout
               >
-                {/* Placeholder gradient - replace with actual images */}
-                <div className="w-full h-full bg-gradient-to-br from-purple-300 via-pink-300 to-purple-400"></div>
+                {/* BunnyCDN Image */}
+                <Image
+                  src={image.url}
+                  alt={image.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover"
+                  loading="lazy"
+                />
 
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity text-center">
@@ -152,7 +151,16 @@ export default function Gallery() {
                 exit={{ scale: 0.8 }}
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="aspect-square w-full bg-gradient-to-br from-purple-300 via-pink-300 to-purple-400 rounded-lg"></div>
+                <div className="relative aspect-square w-full rounded-lg overflow-hidden">
+                  <Image
+                    src={selectedImageData.url}
+                    alt={selectedImageData.title}
+                    fill
+                    sizes="(max-width: 1280px) 90vw, 1280px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
                 <div className="text-center mt-4 text-white">
                   <h3 className="text-2xl font-semibold">{selectedImageData.title}</h3>
                   <p className="text-gray-400">{selectedImageData.category}</p>

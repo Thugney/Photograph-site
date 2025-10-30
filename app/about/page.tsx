@@ -1,7 +1,9 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaCamera, FaAward, FaHeart, FaUsers } from 'react-icons/fa';
+import { ABOUT_IMAGES, IMAGE_CONFIG } from '@/config/images';
 
 export default function About() {
   const stats = [
@@ -35,8 +37,17 @@ export default function About() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
+            className="relative"
           >
-            <div className="aspect-square bg-gradient-to-br from-purple-300 to-purple-500 rounded-2xl"></div>
+            <div className="aspect-square relative rounded-2xl overflow-hidden">
+              <Image
+                src={IMAGE_CONFIG.getImageUrl(ABOUT_IMAGES.hero)}
+                alt="Our Story"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
           </motion.div>
 
           <motion.div
@@ -138,17 +149,25 @@ export default function About() {
             Meet Our Team
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { name: 'Sarah Johnson', role: 'Lead Photographer' },
-              { name: 'Michael Chen', role: 'Wedding Specialist' },
-              { name: 'Emily Davis', role: 'Portrait Photographer' },
-            ].map((member, index) => (
+            {ABOUT_IMAGES.team.map((member, index) => (
               <div key={index} className="text-center">
-                <div className="aspect-square bg-gradient-to-br from-purple-300 to-purple-500 rounded-full mb-4 mx-auto w-48 h-48"></div>
+                <div className="relative aspect-square rounded-full mb-4 mx-auto w-48 h-48 overflow-hidden">
+                  <Image
+                    src={IMAGE_CONFIG.getImageUrl(member.filename)}
+                    alt={member.name}
+                    fill
+                    sizes="192px"
+                    className="object-cover"
+                  />
+                </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-1">
                   {member.name}
                 </h3>
-                <p className="text-gray-600">{member.role}</p>
+                <p className="text-gray-600">
+                  {member.name === 'Sarah Johnson' ? 'Lead Photographer' :
+                   member.name === 'Michael Chen' ? 'Wedding Specialist' :
+                   'Portrait Photographer'}
+                </p>
               </div>
             ))}
           </div>

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaCamera, FaHeart, FaStar } from 'react-icons/fa';
+import { FEATURED_IMAGES, IMAGE_CONFIG } from '@/config/images';
 
 export default function Home() {
   const fadeInUp = {
@@ -139,23 +140,31 @@ export default function Home() {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {[1, 2, 3, 4, 5, 6].map((index) => (
-              <motion.div
-                key={index}
-                className="relative aspect-square overflow-hidden rounded-2xl group cursor-pointer"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="w-full h-full bg-gradient-to-br from-purple-200 to-purple-400"></div>
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all flex items-center justify-center">
-                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-lg font-semibold">
-                    View
-                  </span>
-                </div>
-              </motion.div>
+            {FEATURED_IMAGES.map((image, index) => (
+              <Link href="/gallery" key={image.id}>
+                <motion.div
+                  className="relative aspect-square overflow-hidden rounded-2xl group cursor-pointer"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Image
+                    src={IMAGE_CONFIG.getImageUrl(image.filename)}
+                    alt={image.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all flex items-center justify-center">
+                    <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity text-lg font-semibold">
+                      View
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
 
