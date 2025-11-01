@@ -1,77 +1,92 @@
 'use client';
 
 import Link from 'next/link';
-import { FaCamera, FaInstagram, FaFacebook, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { useTranslations, useLocale } from 'next-intl';
+import { FaCamera, FaInstagram, FaFacebook, FaTiktok, FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp, FaComments } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { CONTACT_INFO, SOCIAL_LINKS } from '@/config/contact';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations('footer');
+  const tCommon = useTranslations('common');
+  const locale = useLocale();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-secondary-500 text-white">
       <div className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <FaCamera className="text-3xl text-purple-500" />
-              <span className="text-2xl font-serif font-bold">PhotoStudio</span>
+              <FaCamera className="text-3xl text-primary-500" />
+              <span className="text-2xl font-serif font-bold">{tCommon('businessName')}</span>
             </div>
             <p className="text-gray-400 mb-6">
-              Capturing life's precious moments with elegance and artistry.
+              {tCommon('tagline')}
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com"
+                href={SOCIAL_LINKS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-purple-500 transition-colors text-xl"
+                className="text-gray-400 hover:text-primary-500 transition-colors text-xl"
                 aria-label="Instagram"
               >
                 <FaInstagram />
               </a>
               <a
-                href="https://facebook.com"
+                href={SOCIAL_LINKS.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-purple-500 transition-colors text-xl"
+                className="text-gray-400 hover:text-primary-500 transition-colors text-xl"
+                aria-label="TikTok"
+              >
+                <FaTiktok />
+              </a>
+              <a
+                href={SOCIAL_LINKS.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary-500 transition-colors text-xl"
                 aria-label="Facebook"
               >
                 <FaFacebook />
               </a>
               <a
-                href="https://twitter.com"
+                href={SOCIAL_LINKS.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-purple-500 transition-colors text-xl"
-                aria-label="Twitter"
+                className="text-gray-400 hover:text-primary-500 transition-colors text-xl"
+                aria-label="Twitter/X"
               >
-                <FaTwitter />
+                <FaXTwitter />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  Home
+                <Link href={`/${locale}`} className="text-gray-400 hover:text-primary-500 transition-colors">
+                  {t('quickLinks')}
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  Gallery
+                <Link href={`/${locale}/gallery`} className="text-gray-400 hover:text-primary-500 transition-colors">
+                  {t('quickLinks')}
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  Services
+                <Link href={`/${locale}/services`} className="text-gray-400 hover:text-primary-500 transition-colors">
+                  {t('quickLinks')}
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  About
+                <Link href={`/${locale}/about`} className="text-gray-400 hover:text-primary-500 transition-colors">
+                  {t('quickLinks')}
                 </Link>
               </li>
             </ul>
@@ -79,36 +94,50 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('services')}</h3>
             <ul className="space-y-2">
-              <li className="text-gray-400">Wedding Photography</li>
-              <li className="text-gray-400">Portrait Sessions</li>
-              <li className="text-gray-400">Event Coverage</li>
-              <li className="text-gray-400">Commercial Photography</li>
+              <li className="text-gray-400">{t('servicesList.wedding')}</li>
+              <li className="text-gray-400">{t('servicesList.portrait')}</li>
+              <li className="text-gray-400">{t('servicesList.baptism')}</li>
+              <li className="text-gray-400">{t('servicesList.family')}</li>
+              <li className="text-gray-400">{t('servicesList.event')}</li>
+              <li className="text-gray-400">{t('servicesList.commercial')}</li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('contactUs')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <FaMapMarkerAlt className="text-purple-500 mt-1" />
+                <FaMapMarkerAlt className="text-primary-500 mt-1" />
                 <span className="text-gray-400">
-                  123 Photography Lane<br />
-                  Studio City, CA 12345
+                  {CONTACT_INFO.address.city}<br />
+                  {CONTACT_INFO.address.country}
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <FaPhone className="text-purple-500" />
-                <a href="tel:+1234567890" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  (123) 456-7890
+                <FaPhone className="text-primary-500" />
+                <a href={`tel:${CONTACT_INFO.phone.replace(/\s/g, '')}`} className="text-gray-400 hover:text-primary-500 transition-colors">
+                  {CONTACT_INFO.phone}
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <FaEnvelope className="text-purple-500" />
-                <a href="mailto:info@photostudio.com" className="text-gray-400 hover:text-purple-500 transition-colors">
-                  info@photostudio.com
+                <FaWhatsapp className="text-primary-500" />
+                <a href={CONTACT_INFO.whatsapp} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-500 transition-colors">
+                  WhatsApp
+                </a>
+              </li>
+              <li className="flex items-center space-x-3">
+                <FaEnvelope className="text-primary-500" />
+                <a href={`mailto:${CONTACT_INFO.email}`} className="text-gray-400 hover:text-primary-500 transition-colors">
+                  {CONTACT_INFO.email}
+                </a>
+              </li>
+              <li className="flex items-center space-x-3">
+                <FaComments className="text-primary-500" />
+                <a href={CONTACT_INFO.chat} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-500 transition-colors">
+                  Live Chat
                 </a>
               </li>
             </ul>
@@ -117,7 +146,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>© {currentYear} PhotoStudio. All rights reserved.</p>
+          <p>© {currentYear} {tCommon('businessName')}. {t('rightsReserved')}.</p>
         </div>
       </div>
     </footer>

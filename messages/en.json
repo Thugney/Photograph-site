@@ -1,0 +1,229 @@
+{
+  "common": {
+    "businessName": "Eriteach",
+    "tagline": "Capturing life's precious moments with elegance and artistry",
+    "learnMore": "Learn more",
+    "bookNow": "Book now",
+    "requestQuote": "Request quote",
+    "viewGallery": "View gallery",
+    "contactUs": "Contact us",
+    "getStarted": "Get started"
+  },
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "services": "Services",
+    "pricing": "Pricing",
+    "about": "About",
+    "booking": "Book Now"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contactUs": "Contact Us",
+    "followUs": "Follow Us",
+    "rightsReserved": "All rights reserved",
+    "servicesList": {
+      "wedding": "Wedding Photography",
+      "portrait": "Portrait Sessions",
+      "baptism": "Baptism Photography",
+      "family": "Family Photography",
+      "event": "Event Coverage",
+      "commercial": "Commercial Photography"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Capturing Life's Moments",
+      "subtitle": "Professional photography for weddings, portraits, and special events",
+      "cta": "Explore our work"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Professional photography services tailored to your needs"
+    },
+    "featured": {
+      "title": "Featured Work",
+      "subtitle": "A collection of our finest moments"
+    },
+    "cta": {
+      "title": "Ready to Capture Your Moments?",
+      "subtitle": "Let us help you preserve life's beautiful moments",
+      "button": "Book Your Session"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Professional photography services tailored to your needs",
+    "wedding": {
+      "title": "Wedding Photography",
+      "description": "Capture the magic of your special day with elegant and timeless images that will last a lifetime."
+    },
+    "portrait": {
+      "title": "Portrait Photography",
+      "description": "Professional portraits that capture your essence and personality perfectly."
+    },
+    "baptism": {
+      "title": "Baptism Photography",
+      "description": "Preserve the precious moments of your child's baptism with beautiful and memorable images."
+    },
+    "family": {
+      "title": "Family Photography",
+      "description": "Create lasting memories with family portraits that celebrate your unique bond."
+    },
+    "event": {
+      "title": "Event Coverage",
+      "description": "Comprehensive coverage of corporate events, parties, and special occasions."
+    },
+    "commercial": {
+      "title": "Commercial Photography",
+      "description": "High-quality product photography and brand imagery for businesses."
+    },
+    "cta": "Book This Service"
+  },
+  "pricing": {
+    "title": "Pricing & Packages",
+    "subtitle": "Choose a package that fits your needs or customize your own",
+    "packages": {
+      "basic": {
+        "name": "Basic",
+        "starting": "starting",
+        "features": {
+          "duration": "1 hour session",
+          "location": "1 location",
+          "photos": "20 edited photos",
+          "retouching": "Basic retouching",
+          "gallery": "Online gallery",
+          "download": "Digital download"
+        }
+      },
+      "standard": {
+        "name": "Standard",
+        "popular": "Most Popular",
+        "starting": "starting",
+        "features": {
+          "duration": "2 hour session",
+          "location": "1-2 locations",
+          "photos": "50 edited photos",
+          "retouching": "Advanced retouching",
+          "gallery": "Online gallery",
+          "download": "Digital download",
+          "release": "Print release"
+        }
+      },
+      "premium": {
+        "name": "Premium",
+        "starting": "starting",
+        "pages": "35 pages",
+        "features": {
+          "duration": "4 hour session",
+          "location": "Multiple locations",
+          "photos": "100+ edited photos",
+          "retouching": "Advanced retouching",
+          "gallery": "Online gallery",
+          "download": "Digital download",
+          "release": "Print release",
+          "album": "Premium album"
+        }
+      },
+      "custom": {
+        "name": "Custom",
+        "starting": "custom pricing"
+      }
+    },
+    "selectPackage": "Select Package",
+    "selected": "Selected",
+    "calculator": {
+      "title": "Price Calculator",
+      "sessionDuration": "Session Duration (hours)",
+      "locations": "Number of Locations",
+      "distance": "Distance from Drammen (km)",
+      "distanceNote": "We charge for travel distance outside Drammen kommune to cover gas, tolls, etc.",
+      "prints": "Physical Prints",
+      "each": "each",
+      "editingLevel": "Editing Level",
+      "basicEditing": "Basic Editing (Included)",
+      "advancedEditing": "Advanced Editing (upon request with client)",
+      "addAlbum": "Add Premium Album",
+      "estimate": "Price Estimate",
+      "basePackage": "Base Package",
+      "extraHours": "Extra Hours",
+      "extraLocations": "Extra Locations",
+      "travelFee": "Travel Fee",
+      "album": "Premium Album",
+      "advancedEditingFee": "Advanced Editing",
+      "totalEstimate": "Total Estimate",
+      "disclaimer": "* This is an estimate. Final pricing may vary based on specific requirements.",
+      "requestQuote": "Request Quote"
+    }
+  },
+  "gallery": {
+    "title": "Our Gallery",
+    "subtitle": "Explore our portfolio of stunning moments",
+    "filter": {
+      "all": "All",
+      "weddings": "Weddings",
+      "portraits": "Portraits",
+      "baptism": "Baptism",
+      "family": "Family",
+      "events": "Events",
+      "commercial": "Commercial"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Passion for capturing life's beautiful moments",
+    "story": {
+      "title": "Our Story",
+      "content": "With over 10 years of experience in photography, we have dedicated our work to capturing the moments that matter most. Our passion for storytelling through images drives us to create timeless memories for our clients."
+    },
+    "stats": {
+      "experience": "Years Experience",
+      "clients": "Happy Clients",
+      "photos": "Photos Taken"
+    },
+    "philosophy": {
+      "title": "Our Philosophy",
+      "content": "We believe in capturing authentic moments and genuine emotion. Our approach blends artistic vision with technical expertise to deliver images that tell your unique story."
+    }
+  },
+  "booking": {
+    "title": "Book Your Session",
+    "subtitle": "Fill out the form below and we'll get back to you soon",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Select Service",
+      "date": "Preferred Date",
+      "message": "Tell us about your project",
+      "submit": "Submit Booking",
+      "submitting": "Submitting...",
+      "success": "Thank you for your booking! We'll contact you soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "serviceOptions": {
+      "wedding": "Wedding Photography",
+      "portrait": "Portrait Photography",
+      "baptism": "Baptism Photography",
+      "family": "Family Photography",
+      "event": "Event Coverage",
+      "commercial": "Commercial Photography",
+      "other": "Other"
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "phone": "Call us",
+      "email": "Email us",
+      "whatsapp": "WhatsApp",
+      "chat": "Live chat"
+    }
+  },
+  "contact": {
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "chat": "Chat"
+  }
+}

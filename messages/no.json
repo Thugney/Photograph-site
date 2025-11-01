@@ -1,0 +1,229 @@
+{
+  "common": {
+    "businessName": "Eriteach",
+    "tagline": "Fanger livets øyeblikk med eleganse og kunstnerskap",
+    "learnMore": "Lær mer",
+    "bookNow": "Bestill nå",
+    "requestQuote": "Be om tilbud",
+    "viewGallery": "Se galleri",
+    "contactUs": "Kontakt oss",
+    "getStarted": "Kom i gang"
+  },
+  "nav": {
+    "home": "Hjem",
+    "gallery": "Galleri",
+    "services": "Tjenester",
+    "pricing": "Priser",
+    "about": "Om oss",
+    "booking": "Bestill nå"
+  },
+  "footer": {
+    "quickLinks": "Hurtiglenker",
+    "services": "Tjenester",
+    "contactUs": "Kontakt oss",
+    "followUs": "Følg oss",
+    "rightsReserved": "Alle rettigheter reservert",
+    "servicesList": {
+      "wedding": "Bryllupsfotografering",
+      "portrait": "Portrettfotografering",
+      "baptism": "Dåpsfotografering",
+      "family": "Familiefotografering",
+      "event": "Arrangementer",
+      "commercial": "Kommersiell fotografering"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Fanger livets øyeblikk",
+      "subtitle": "Profesjonell fotografering for bryllup, portretter og spesielle begivenheter",
+      "cta": "Utforsk vårt arbeid"
+    },
+    "services": {
+      "title": "Våre tjenester",
+      "subtitle": "Profesjonelle fotografitjenester tilpasset dine behov"
+    },
+    "featured": {
+      "title": "Utvalgte arbeider",
+      "subtitle": "En samling av våre beste øyeblikk"
+    },
+    "cta": {
+      "title": "Klar til å fange dine øyeblikk?",
+      "subtitle": "La oss hjelpe deg med å bevare livets vakre øyeblikk",
+      "button": "Bestill din fotografering"
+    }
+  },
+  "services": {
+    "title": "Våre tjenester",
+    "subtitle": "Profesjonelle fotografitjenester tilpasset dine behov",
+    "wedding": {
+      "title": "Bryllupsfotografering",
+      "description": "Fang den magiske dagen med elegante og tidløse bilder som vil vare en levetid."
+    },
+    "portrait": {
+      "title": "Portrettfotografering",
+      "description": "Profesjonelle portretter som fanger din essens og personlighet perfekt."
+    },
+    "baptism": {
+      "title": "Dåpsfotografering",
+      "description": "Bevar de dyrebare øyeblikkene fra barnets dåp med vakre og minnerike bilder."
+    },
+    "family": {
+      "title": "Familiefotografering",
+      "description": "Skape varige minner med familieportretter som feirer deres unike bånd."
+    },
+    "event": {
+      "title": "Arrangementer",
+      "description": "Omfattende dekning av bedriftsarrangementer, fester og spesielle anledninger."
+    },
+    "commercial": {
+      "title": "Kommersiell fotografering",
+      "description": "Høykvalitets produktfotografering og merkevarebilder for bedrifter."
+    },
+    "cta": "Bestill denne tjenesten"
+  },
+  "pricing": {
+    "title": "Priser & Pakker",
+    "subtitle": "Velg en pakke som passer dine behov eller tilpass din egen",
+    "packages": {
+      "basic": {
+        "name": "Basis",
+        "starting": "fra",
+        "features": {
+          "duration": "1 times økt",
+          "location": "1 lokasjon",
+          "photos": "20 redigerte bilder",
+          "retouching": "Grunnleggende retusjering",
+          "gallery": "Online galleri",
+          "download": "Digital nedlasting"
+        }
+      },
+      "standard": {
+        "name": "Standard",
+        "popular": "Mest populær",
+        "starting": "fra",
+        "features": {
+          "duration": "2 timers økt",
+          "location": "1-2 lokasjoner",
+          "photos": "50 redigerte bilder",
+          "retouching": "Avansert retusjering",
+          "gallery": "Online galleri",
+          "download": "Digital nedlasting",
+          "release": "Utskriftsrettigheter"
+        }
+      },
+      "premium": {
+        "name": "Premium",
+        "starting": "fra",
+        "pages": "35 sider",
+        "features": {
+          "duration": "4 timers økt",
+          "location": "Flere lokasjoner",
+          "photos": "100+ redigerte bilder",
+          "retouching": "Avansert retusjering",
+          "gallery": "Online galleri",
+          "download": "Digital nedlasting",
+          "release": "Utskriftsrettigheter",
+          "album": "Premium album"
+        }
+      },
+      "custom": {
+        "name": "Tilpasset",
+        "starting": "tilpasset pris"
+      }
+    },
+    "selectPackage": "Velg pakke",
+    "selected": "Valgt",
+    "calculator": {
+      "title": "Priskalkulator",
+      "sessionDuration": "Øktens varighet (timer)",
+      "locations": "Antall lokasjoner",
+      "distance": "Avstand fra Drammen (km)",
+      "distanceNote": "Vi tar betalt for reiseavstand utenfor Drammen kommune for å dekke bensin, bompenger, etc.",
+      "prints": "Fysiske utskrifter",
+      "each": "hver",
+      "editingLevel": "Redigeringsnivå",
+      "basicEditing": "Grunnleggende redigering (inkludert)",
+      "advancedEditing": "Avansert redigering (etter avtale med klient)",
+      "addAlbum": "Legg til Premium Album",
+      "estimate": "Prisanslag",
+      "basePackage": "Grunnpakke",
+      "extraHours": "Ekstra timer",
+      "extraLocations": "Ekstra lokasjoner",
+      "travelFee": "Reiseavgift",
+      "album": "Premium Album",
+      "advancedEditingFee": "Avansert redigering",
+      "totalEstimate": "Totalt anslag",
+      "disclaimer": "* Dette er et estimat. Endelig pris kan variere basert på spesifikke krav.",
+      "requestQuote": "Be om tilbud"
+    }
+  },
+  "gallery": {
+    "title": "Vårt galleri",
+    "subtitle": "Utforsk vårt portfolio med fantastiske øyeblikk",
+    "filter": {
+      "all": "Alle",
+      "weddings": "Bryllup",
+      "portraits": "Portretter",
+      "baptism": "Dåp",
+      "family": "Familie",
+      "events": "Arrangementer",
+      "commercial": "Kommersielt"
+    }
+  },
+  "about": {
+    "title": "Om oss",
+    "subtitle": "Lidenskap for å fange livets vakre øyeblikk",
+    "story": {
+      "title": "Vår historie",
+      "content": "Med over 10 års erfaring innen fotografering, har vi dedikert vårt arbeid til å fange de øyeblikkene som betyr mest. Vår lidenskap for historiefortelling gjennom bilder driver oss til å skape tidløse minner for våre klienter."
+    },
+    "stats": {
+      "experience": "Års erfaring",
+      "clients": "Fornøyde klienter",
+      "photos": "Bilder tatt"
+    },
+    "philosophy": {
+      "title": "Vår filosofi",
+      "content": "Vi tror på å fange autentiske øyeblikk og genuin følelse. Vår tilnærming blander kunstnerisk visjon med teknisk ekspertise for å levere bilder som forteller din unike historie."
+    }
+  },
+  "booking": {
+    "title": "Bestill din fotografering",
+    "subtitle": "Fyll ut skjemaet nedenfor så kontakter vi deg snart",
+    "form": {
+      "name": "Fullt navn",
+      "email": "E-post",
+      "phone": "Telefon",
+      "service": "Velg tjeneste",
+      "date": "Foretrukket dato",
+      "message": "Fortell oss om ditt prosjekt",
+      "submit": "Send inn bestilling",
+      "submitting": "Sender...",
+      "success": "Takk for din bestilling! Vi kontakter deg snart.",
+      "error": "Noe gikk galt. Vennligst prøv igjen."
+    },
+    "serviceOptions": {
+      "wedding": "Bryllupsfotografering",
+      "portrait": "Portrettfotografering",
+      "baptism": "Dåpsfotografering",
+      "family": "Familiefotografering",
+      "event": "Arrangementer",
+      "commercial": "Kommersiell fotografering",
+      "other": "Annet"
+    },
+    "contactInfo": {
+      "title": "Kontaktinformasjon",
+      "phone": "Ring oss",
+      "email": "Send e-post",
+      "whatsapp": "WhatsApp",
+      "chat": "Live chat"
+    }
+  },
+  "contact": {
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-post",
+    "whatsapp": "WhatsApp",
+    "chat": "Chat"
+  }
+}

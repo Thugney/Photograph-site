@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Photography Portfolio | Professional Photography Services",
-  description: "Elegant photography portfolio showcasing professional photography services. Book your session and explore our gallery.",
-  keywords: "photography, portfolio, professional photographer, photo sessions, wedding photography, portrait photography",
+  title: "Eriteach Photography | Professional Photography Services",
+  description: "Professional photography services for weddings, portraits, baptisms, and events. Based in Drammen, Norway.",
+  keywords: "photography, fotograf, professional photographer, photo sessions, wedding photography, portrait photography, baptism, bryllupsfotograf, portrettfotograf, Drammen",
 };
 
 export default function RootLayout({
@@ -14,20 +12,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-sans">
-        <Navigation />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
-  );
+  return children;
 }
