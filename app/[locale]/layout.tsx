@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { locales } from '@/config/locales';
+import LangSetter from '@/components/LangSetter';
 
 // Note: Metadata cannot be exported from client component or dynamic route
 // Moving to root layout would be better, but for now we'll handle fonts differently
@@ -32,16 +33,17 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale}>
-      <body className="font-sans">
-        <NextIntlClientProvider messages={messages}>
+    <>
+      <LangSetter locale={locale} />
+      <NextIntlClientProvider messages={messages}>
+        <div className="font-sans">
           <Navigation />
           <main className="min-h-screen">
             {children}
           </main>
           <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+        </div>
+      </NextIntlClientProvider>
+    </>
   );
 }
