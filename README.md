@@ -138,6 +138,52 @@ Consider adding these features for a complete solution:
 
 MIT License - feel free to use this for your photography business!
 
+## Troubleshooting
+
+### "Could not read package.json" Error
+
+If you encounter an `ENOENT: no such file or directory, open 'package.json'` error after cloning:
+
+1. **Verify you're in the correct directory**:
+   ```bash
+   # Check your current directory
+   pwd  # On Mac/Linux
+   cd   # On Windows
+
+   # You should be in the Photograph-site directory
+   # If not, navigate to it:
+   cd Photograph-site
+   ```
+
+2. **Check if package.json exists**:
+   ```bash
+   # List files to verify package.json exists
+   ls -la package.json  # Mac/Linux
+   dir package.json     # Windows
+   ```
+
+3. **If files are missing, re-clone the repository**:
+   ```bash
+   # Delete the incomplete clone
+   cd ..
+   rm -rf Photograph-site  # or delete the folder manually
+
+   # Clone again
+   git clone https://github.com/Thugney/Photograph-site.git
+   cd Photograph-site
+   ```
+
+4. **Verify the clone was successful**:
+   ```bash
+   git status
+   # Should show: "On branch main"
+   ```
+
+5. **Then install dependencies**:
+   ```bash
+   npm install
+   ```
+
 ## Support
 
 For issues or questions, please open an issue on GitHub.
